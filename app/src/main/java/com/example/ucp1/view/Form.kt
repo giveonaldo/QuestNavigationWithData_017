@@ -99,6 +99,13 @@ fun Formulir(
                     }
                 }
             }
+
+            FilledTonalButton(
+                onClick = {onSubmitBtnClick(listData)},
+                modifier = Modifier.padding(top = 10.dp, end = 20.dp).align(Alignment.End),
+            ) {
+                Text(stringResource(R.string.btn_submit))
+            }
         }
 
     }
