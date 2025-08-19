@@ -46,7 +46,13 @@ fun Formulir(
     val listData: MutableList<String> = mutableListOf(txtNama, txtGender, txtAlamat)
 
     Scaffold(
-        
+        topBar = {
+            TopAppBar(
+                title = { Text(text = stringResource(R.string.app_name), color = Color.White) },
+                colors = TopAppBarDefaults.topAppBarColors(MaterialTheme.colorScheme.secondary),
+                modifier = Modifier.padding(bottom = 10.dp)
+            )
+        }
     ) {
 
     }
