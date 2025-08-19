@@ -35,5 +35,7 @@ import com.example.ucp1.R
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Formulir(
-    
+    pilihanJK: List<String>,
+    onSubmitBtnClick: (MutableList<String>) -> Unit,
+    modifier: Modifier = Modifier
 ) {}
