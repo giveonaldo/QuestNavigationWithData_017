@@ -27,4 +27,24 @@ fun ShowData(
         Pair(stringResource(R.string.text_field_tag), statusUiSiswa.alamat),
         Pair(stringResource(R.string.gender), statusUiSiswa.gender)
     )
+
+    Scaffold { innerpadding ->
+        Column(
+            modifier = Modifier.padding(innerpadding).height(500.dp).fillMaxWidth(),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            items.forEach { item ->
+                Column {
+                    Text(text = item.first)
+                    Text(text = item.second)
+                }
+                HorizontalDivider(thickness = 1.dp, color = Color.Green)
+            }
+            Spacer(Modifier.height(10.dp))
+            Button(
+                modifier = Modifier.padding(10.dp),
+                onClick = onBackBtnClick
+            ) { Text(stringResource(R.string.btn_back)) }
+        }
+    }
 }
