@@ -59,7 +59,16 @@ fun Formulir(
                 .padding(innerPadding).fillMaxWidth().height(500.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
-        ) {  }
+        ) {
+            TextField(
+                value = txtNama,
+                onValueChange = { newText ->
+                    txtNama = newText
+                },
+                label = { Text("Nama") },
+                modifier = Modifier.padding(bottom = 15.dp)
+            )
+        }
 
     }
 }
