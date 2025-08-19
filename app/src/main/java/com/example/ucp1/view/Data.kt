@@ -18,4 +18,7 @@ import androidx.compose.ui.unit.dp
 import com.example.ucp1.model.DataSiswa
 
 @Composable
-fun ShowData() {}
+fun ShowData(
+    statusUiSiswa: DataSiswa,
+    onBackBtnClick: () -> Unit
+) {}
