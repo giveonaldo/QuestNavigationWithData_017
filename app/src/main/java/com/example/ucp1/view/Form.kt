@@ -77,6 +77,28 @@ fun Formulir(
                 label = { Text(stringResource(R.string.text_field_tag)) },
                 placeholder = { Text(stringResource(R.string.text_field)) }
             )
+
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(top = 10.dp),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
+                pilihanJK.forEach { item ->
+                    Row(modifier = Modifier.selectable(
+                        selected = (txtGender == item),
+                        onClick = {txtGender = item}
+                    ),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        RadioButton(
+                            selected = (txtGender == item),
+                            onClick = {txtGender = item}
+                        )
+                        Text(
+                            text = item
+                        )
+                    }
+                }
+            }
         }
 
     }
