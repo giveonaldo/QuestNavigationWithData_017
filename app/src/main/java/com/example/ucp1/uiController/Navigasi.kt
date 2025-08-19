@@ -24,5 +24,32 @@ enum class Navigasi {
 fun Navigate(
     viewModel: SiswaViewModel = viewModel(),
     navController: NavHostController = rememberNavController()
-) {}
+) {
+    Scaffold { innerPadding ->
+        val uiState = viewModel.statusUI.collectAsState()
+        NavHost(
+            navController = navController,
+            startDestination = Navigasi.Formulir.name,
+            modifier = Modifier.padding(innerPadding).fillMaxSize()
+        ) {
+            composable(route = Navigasi.Formulir.name) {
+                val konteks = LocalContext.current
+                Formulir(
+                    pilihanJK = JenisK.map { id -> konteks.resources.getString(id) },
+                    onSubmitBtnClick = {
+                        viewModel.setSiswa(it)
+                        navController.navigate(Navigasi.Data.name)
+                    }
+                )
+            }
+
+            composable(route = Navigasi.Data.name) {
+                ShowData(
+                    statusUiSiswa = uiState.value,
+                    onBackBtnClick = { backToForm(navController)}
+                )
+            }
+        }
+    }
+}
 
