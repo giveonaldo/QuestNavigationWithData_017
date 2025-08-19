@@ -68,6 +68,15 @@ fun Formulir(
                 label = { Text("Nama") },
                 modifier = Modifier.padding(bottom = 15.dp)
             )
+
+            OutlinedTextField(
+                value = txtAlamat,
+                onValueChange = { newText ->
+                    txtAlamat = newText
+                },
+                label = { Text(stringResource(R.string.text_field_tag)) },
+                placeholder = { Text(stringResource(R.string.text_field)) }
+            )
         }
 
     }
