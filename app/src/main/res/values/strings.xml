@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MVVM</string>
+
+    <!-- Splash Screen -->
+    <string name="text_header">Selamat Datang</string>
+    <string name="text_nama">Nama</string>
+    <string name="text_nim">20210140017</string>
+    <string name="text_submit">Submit</string>
+
+    <!-- Field -->
+    <string name="text_field">Yogyakarta</string>
+    <string name="text_field_tag">Alamat</string>
+    <string name="jk_laki">Laki - laki</string>
+    <string name="jk_perempuan">Perempuan</string>
+    <string name="gender">Gender</string>
+
+    <!-- Button -->
+    <string name="btn_submit">Submit</string>
+    <string name="btn_back">Back</string>
+</resources>
