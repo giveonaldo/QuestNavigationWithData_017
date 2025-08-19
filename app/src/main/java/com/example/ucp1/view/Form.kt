@@ -32,3 +32,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.ucp1.R
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun Formulir(
+    
+) {}
