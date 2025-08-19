@@ -53,7 +53,13 @@ fun Formulir(
                 modifier = Modifier.padding(bottom = 10.dp)
             )
         }
-    ) {
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .padding(innerPadding).fillMaxWidth().height(500.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {  }
 
     }
 }
