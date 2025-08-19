@@ -21,5 +21,8 @@ enum class Navigasi {
 }
 
 @Composable
-fun Navigate() {}
+fun Navigate(
+    viewModel: SiswaViewModel = viewModel(),
+    navController: NavHostController = rememberNavController()
+) {}
 
