@@ -21,4 +21,10 @@ import com.example.ucp1.model.DataSiswa
 fun ShowData(
     statusUiSiswa: DataSiswa,
     onBackBtnClick: () -> Unit
-) {}
+) {
+    val items = listOf(
+        Pair(stringResource(R.string.text_nama), statusUiSiswa.nama),
+        Pair(stringResource(R.string.text_field_tag), statusUiSiswa.alamat),
+        Pair(stringResource(R.string.gender), statusUiSiswa.gender)
+    )
+}
