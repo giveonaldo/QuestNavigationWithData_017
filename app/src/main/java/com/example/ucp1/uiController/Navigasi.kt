@@ -20,5 +20,6 @@ enum class Navigasi {
     Data
 }
 
-
+@Composable
+fun Navigate() {}
 
